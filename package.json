@@ -1,0 +1,12 @@
+{
+  "name": "fortschritt-healthcare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for Fortschritt Healthcare",
+  "scripts": {
+    "dev": "pnpm -r run dev",
+    "build": "pnpm -r run build",
+    "start": "pnpm -r run start"
+  },
+  "packageManager": "pnpm@10.28.2"
+}
