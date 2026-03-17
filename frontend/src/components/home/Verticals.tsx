@@ -64,7 +64,7 @@ const Verticals = () => {
           {verticals.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 group hover:border-primary/30 transition-all duration-500 flex flex-col"
+              className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 group hover:border-primary/30 hover:-translate-y-2 transition-all duration-500 flex flex-col"
             >
               <div className="h-48 overflow-hidden relative">
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />

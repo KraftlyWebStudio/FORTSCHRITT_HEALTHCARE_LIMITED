@@ -39,12 +39,18 @@ const Timeline = () => {
             </p>
             <div className="hidden md:block">
                <div className="w-24 h-1 bg-primary/20 rounded-full mb-4"></div>
-               <div className="text-primary font-bold text-sm tracking-widest uppercase">Over a decade of legacy</div>
+               <div className="text-primary font-bold text-sm tracking-widest uppercase mb-6">Over a decade of legacy</div>
+               <a 
+                 href="/history" 
+                 className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all underline underline-offset-4"
+               >
+                 View Full History <span className="material-icons text-sm">arrow_forward</span>
+               </a>
             </div>
           </div>
 
           <div className="md:w-2/3 space-y-12 relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-1 before:bg-primary/10 pl-10 ml-4">
-            {milestones.map((item, idx) => (
+            {milestones.slice(0, 3).map((item, idx) => (
               <div key={idx} className="relative group">
                 <div className="absolute -left-[45px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-primary transition-all group-hover:scale-125 group-hover:shadow-[0_0_15px_rgba(43,27,123,0.3)]"></div>
                 <div className="text-primary font-black text-xl mb-1 tabular-nums">
