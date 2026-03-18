@@ -1,40 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --primary: #2b1b7b;
-  --secondary: #2186c3;
-  --surface: #f1f5f9;
+  /* Premium Healthcare Palette */
+  --background: #fdfdfe;
+  --foreground: #0c121e;
+  --primary: #1e3a8a; /* Deep Navy Blue */
+  --primary-accent: #3b82f6; /* Modern Vibrant Blue */
+  --secondary: #0ea5e9; /* Sky Blue */
+  --surface: #f8fafc;
+  --glass: rgba(255, 255, 255, 0.7);
+  --border-glass: rgba(255, 255, 255, 0.2);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primary-accent: var(--primary-accent);
   --color-secondary: var(--secondary);
   --color-surface: var(--surface);
-  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Manrope', sans-serif;
+  --font-sans: 'Inter', 'Manrope', ui-sans-serif, system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f172a;
-    --foreground: #f8fafc;
+    --background: #0b0f19;
+    --foreground: #f1f5f9;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
-.sub-nav-link.active {
-  border-bottom: 2px solid var(--primary);
-  color: var(--primary);
+/* Premium Utilities */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+}
+
+/* Advanced Animation Primitives */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
 }
 
 .material-icons {

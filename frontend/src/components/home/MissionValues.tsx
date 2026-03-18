@@ -5,12 +5,12 @@ import React from "react";
 const values = [
   {
     title: "Our Mission",
-    description: "To enhance the quality of human life by providing innovative, high-quality, and affordable pharmaceutical products across the globe.",
+    description: "To enhance the quality of human life by providing innovative, high-quality, and affordable pharmaceutical products across the nation.",
     icon: "rocket_launch",
   },
   {
     title: "Our Vision",
-    description: "To be a globally recognized pharmaceutical leader, admired for our scientific excellence, ethical standards, and patient-centric approach.",
+    description: "To be a recognized pharmaceutical leader, admired for our scientific excellence, ethical standards, and patient-centric approach.",
     icon: "visibility",
   },
   {
@@ -22,29 +22,31 @@ const values = [
 
 const MissionValues = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {values.map((item) => (
-            <a
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {values.map((item, idx) => (
+            <div
               key={item.title}
-              href="#about"
-              className="bg-white rounded-3xl p-10 shadow-xl shadow-slate-200/50 border border-slate-100 group hover:bg-primary transition-all duration-500 flex flex-col h-full"
+              className={`bg-white rounded-[40px] p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-slate-100 group hover:border-primary/20 transition-all duration-500 flex flex-col h-full reveal-up stagger-${idx + 1}`}
             >
-              <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-white transition-all transform group-hover:rotate-12">
-                <span className="material-icons text-3xl">{item.icon}</span>
+              <div className="w-20 h-20 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mb-10 group-hover:scale-110 transition-transform">
+                <span className="material-icons text-4xl">{item.icon}</span>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-white transition-colors">
+              <h3 className="text-3xl font-extrabold text-slate-900 mb-6 group-hover:text-primary transition-colors">
                 {item.title}
               </h3>
-              <p className="text-slate-600 leading-relaxed group-hover:text-white/80 transition-colors mb-8 flex-grow">
+              <p className="text-slate-500 text-lg leading-relaxed font-medium mb-10 flex-grow">
                 {item.description}
               </p>
-              <div className="flex items-center gap-2 text-primary font-bold group-hover:text-white transition-all mt-auto">
-                <span className="text-sm uppercase tracking-wider">Learn More</span>
-                <span className="material-icons group-hover:translate-x-2 transition-transform">east</span>
+              
+              <div className="pt-8 border-t border-slate-100">
+                <a href="#about" className="inline-flex items-center gap-3 text-primary font-bold hover:gap-5 transition-all group/link">
+                  Learn More
+                  <span className="material-icons text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

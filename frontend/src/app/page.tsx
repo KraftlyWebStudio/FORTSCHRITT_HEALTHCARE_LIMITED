@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
-import Stats from "@/components/home/Stats";
+
 import Welcome from "@/components/home/Welcome";
 import Partners from "@/components/home/Partners";
 import Verticals from "@/components/home/Verticals";
@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Stats />
+
         <Welcome />
         <Partners />
         <Verticals />

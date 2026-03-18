@@ -55,7 +55,7 @@ const Footer = () => {
             <ul className="space-y-4 text-white/70 text-sm">
               <li className="flex items-start gap-3">
                 <span className="material-icons text-secondary text-base pt-1">location_on</span>
-                <span>Global Headquarters,<br/>Corporate Tower, City Plaza</span>
+                <span>Corporate Headquarters,<br/>Corporate Tower, City Plaza</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-icons text-secondary text-base">call</span>

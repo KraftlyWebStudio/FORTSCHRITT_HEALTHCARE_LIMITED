@@ -2,54 +2,73 @@
 
 import React from "react";
 
+const partners = [
+  { name: "National Pharma", type: "Research Collaborator", icon: "science" },
+  { name: "Himachal Bio", type: "Manufacturing Partner", icon: "factory" },
+  { name: "Apex Labs", type: "Quality Assurance", icon: "verified" },
+  { name: "LifeCare", type: "Distribution Network", icon: "local_shipping" },
+  { name: "EuroHealth", type: "Supply Chain", icon: "inventory" },
+  { name: "MedTech", type: "R&D Innovations", icon: "biotech" },
+];
+
 const Partners = () => {
   return (
-    <section id="partners" className="py-20 bg-white overflow-hidden">
+    <section id="partners" className="py-24 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-            Strategic Business Partners
-          </h2>
-          <p className="text-slate-600 mb-6">
-            We collaborate with global healthcare leaders and research institutions to drive innovation and maintain the highest standards of pharmaceutical excellence.
-          </p>
-          <a
-            href="#"
-            className="text-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all underline decoration-2 underline-offset-4 decoration-primary/20 hover:decoration-primary"
-          >
-            Partner With Us <span className="material-icons">arrow_forward</span>
-          </a>
-        </div>
-        
-        <div className="mt-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-center gap-8 md:gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
-          <div className="flex flex-col items-center gap-3">
-            <img 
-              src="/images/brand/logo.png" 
-              alt="Fortschritt Healthcare" 
-              className="h-10 w-auto"
-            />
-            <span className="text-slate-900 font-bold text-sm tracking-tight">FORTSCHRITT</span>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20 reveal-up">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-widest mb-4">
+              Collaborations
+            </div>
+            <h2 className="text-4xl font-extrabold text-slate-900 mb-6">
+              Strategic Pharmaceutical <span className="text-primary-accent text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Partnerships</span>
+            </h2>
+            <p className="text-slate-500 text-lg leading-relaxed font-medium">
+              We collaborate with healthcare leaders and research institutions to drive innovation and maintain the highest standards of pharmaceutical excellence across the nation.
+            </p>
           </div>
           
-          {[
-            { name: "Global Pharma", type: "Research" },
-            { name: "Himachal Bio", type: "Manufacturing" },
-            { name: "Apex Labs", type: "Quality" },
-            { name: "LifeCare", type: "Distribution" },
-            { name: "EuroHealth", type: "Supply" }
-          ].map((partner, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center">
-               <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center mb-2 group-hover:bg-primary/5 transition-colors">
-                  <span className="material-icons text-slate-400 text-2xl">business</span>
-               </div>
-               <div className="text-slate-900 font-bold text-sm leading-tight">{partner.name}</div>
-               <div className="text-slate-400 text-[9px] font-bold uppercase tracking-wider mt-1">{partner.type}</div>
+          <a
+            href="#"
+            className="group flex items-center gap-4 bg-white px-8 py-4 rounded-2xl font-bold text-slate-700 hover:text-primary transition-all border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1"
+          >
+            Partner With Us 
+            <span className="material-icons text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Infinite Scroll Logo Cloud (CSS Only) */}
+      <div className="relative w-full flex overflow-hidden">
+        <div className="flex animate-scroll hover:[animation-play-state:paused] gap-8 py-4">
+          {[...partners, ...partners].map((p, idx) => (
+            <div 
+              key={idx} 
+              className="flex-shrink-0 w-64 glass p-8 rounded-[24px] border border-white/50 hover-lift group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-slate-400 group-hover:text-primary group-hover:bg-primary/5 transition-all shadow-sm">
+                  <span className="material-icons text-3xl">{p.icon}</span>
+                </div>
+                <div>
+                  <div className="text-slate-900 font-bold text-base tracking-tight group-hover:text-primary transition-colors">{p.name}</div>
+                  <div className="text-slate-400 text-[10px] font-bold uppercase tracking-wider mt-0.5">{p.type}</div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
-        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-256px * 6 - 32px * 6)); }
+        }
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
