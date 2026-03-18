@@ -172,12 +172,11 @@ export default function Navbar() {
                   >
                     {/* Trigger */}
                     <button
-                      className={`nav-link-underline flex items-center gap-1.5 px-4 py-2.5 rounded-xl
-                        text-sm font-semibold transition-colors duration-200
-                        ${activeDropdown === item.label
+                      className={`nav-link-underline flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors duration-200 ${
+                        activeDropdown === item.label
                           ? "text-primary bg-primary/5"
                           : "text-slate-600 hover:text-primary hover:bg-primary/5"
-                        }`}
+                      }`}
                     >
                       {item.label}
                       <span
@@ -209,8 +208,7 @@ export default function Navbar() {
                               <a
                                 key={sub.label}
                                 href={sub.href}
-                                className="drop-row flex items-center gap-3.5 px-3 py-2.5 rounded-xl
-                                  hover:bg-primary/5"
+                                className="drop-row flex items-center gap-3.5 px-3 py-2.5 rounded-xl hover:bg-primary/5"
                               >
                                 <div className="drop-icon w-9 h-9 rounded-lg flex items-center
                                   justify-center flex-shrink-0 bg-primary/8">
@@ -242,8 +240,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href || "/"}
                     onClick={item.href === "/" ? scrollToTop : undefined}
-                    className="nav-link-underline px-4 py-2.5 rounded-xl text-sm font-semibold
-                      text-slate-600 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
+                    className="nav-link-underline px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
                   >
                     {item.label}
                   </Link>
@@ -253,9 +250,7 @@ export default function Navbar() {
               {/* CTA */}
               <a
                 href="#contact"
-                className="ml-4 flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm
-                  font-bold rounded-full hover:bg-primary/90 active:scale-95 group
-                  transition-all duration-200"
+                className="ml-4 flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-full hover:bg-primary/90 active:scale-95 group transition-all duration-200"
                 style={{ boxShadow: "0 4px 22px -4px rgba(58,90,190,0.5)" }}
               >
                 <span className="material-icons text-[16px] transition-transform duration-500 group-hover:rotate-12">
@@ -267,8 +262,7 @@ export default function Navbar() {
 
             {/* ── Hamburger ─────────────────────────────────── */}
             <button
-              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]
-                rounded-xl hover:bg-primary/5 transition-colors duration-200"
+              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] rounded-xl hover:bg-primary/5 transition-colors duration-200"
               onClick={() => setMobileOpen((p) => !p)}
               aria-label="Toggle menu"
             >
@@ -309,9 +303,7 @@ export default function Navbar() {
                 <div key={item.label}>
                   <button
                     onClick={() => setMobileExp((p) => (p === item.label ? null : item.label))}
-                    className="w-full flex items-center justify-between px-4 py-3 rounded-xl
-                      text-sm font-semibold text-slate-700 hover:bg-primary/5 hover:text-primary
-                      transition-colors duration-200"
+                    className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 hover:bg-primary/5 hover:text-primary transition-colors duration-200"
                   >
                     {item.label}
                     <span
@@ -337,8 +329,7 @@ export default function Navbar() {
                           key={sub.label}
                           href={sub.href}
                           onClick={() => setMobileOpen(false)}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm
-                            text-slate-600 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
                         >
                           <span className="material-icons text-[16px] text-primary/60">{sub.icon}</span>
                           {sub.label}
@@ -352,8 +343,7 @@ export default function Navbar() {
                   key={item.label}
                   href={item.href || "/"}
                   onClick={item.href === "/" ? scrollToTop : () => setMobileOpen(false)}
-                  className="block px-4 py-3 rounded-xl text-sm font-semibold
-                    text-slate-700 hover:bg-primary/5 hover:text-primary transition-colors duration-200"
+                  className="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 hover:bg-primary/5 hover:text-primary transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
@@ -364,8 +354,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-primary
-                  text-white text-sm font-bold rounded-xl hover:bg-primary/90 transition-all duration-200"
+                className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary/90 transition-all duration-200"
                 style={{ boxShadow: "0 4px 20px -4px rgba(58,90,190,0.4)" }}
               >
                 <span className="material-icons text-[16px]">mail_outline</span>

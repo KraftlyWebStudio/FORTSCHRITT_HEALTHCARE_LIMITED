@@ -168,7 +168,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes subtle-zoom {
           from { transform: scale(1.05); }
           to { transform: scale(1.15); }
