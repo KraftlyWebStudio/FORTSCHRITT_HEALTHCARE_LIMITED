@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FadeIn, FadeUp, StaggerGrid, staggerItem, motion } from "@/utils/animations";
+import { FadeIn, StaggerGrid, staggerItem, motion } from "@/utils/animations";
 
 const Welcome = () => {
   return (
