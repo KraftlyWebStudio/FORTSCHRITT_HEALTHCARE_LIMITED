@@ -27,7 +27,7 @@ const About = () => {
           <div>
             <div className="mb-10">
               <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Our Foundation</h2>
-              <h3 className="text-4xl font-extrabold text-slate-900 mb-6 font-display">Quality Assured Pharmaceutical Solutions Since 2012</h3>
+              <h3 className="text-4xl font-extrabold text-primary mb-6 font-display">Quality Assured Pharmaceutical Solutions Since 2012</h3>
               <p className="text-slate-600 text-lg leading-relaxed mb-4">
                 Our foundation stone was laid in the year 2012 in Himachal Pradesh, India. Since then, we have served numerous clients and turned them into loyal partners through our commitment to honesty and fair pricing.
               </p>
@@ -47,7 +47,7 @@ const About = () => {
                     <span className="material-icons">{item.icon}</span>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h4>
+                    <h4 className="text-xl font-bold text-primary mb-2">{item.title}</h4>
                     <p className="text-slate-500">{item.desc}</p>
                   </div>
                 </div>

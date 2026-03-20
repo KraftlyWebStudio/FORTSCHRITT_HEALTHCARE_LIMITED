@@ -72,28 +72,28 @@ const navItems: NavItem[] = [
   {
     label: "About",
     dropdown: [
-      { label: "Company Overview",    href: "#about",    icon: "domain",           description: "Our story, mission & values"     },
-      { label: "CEO's Message",       href: "#ceo",      icon: "person",           description: "Leadership vision & direction"   },
-      { label: "Our Team",            href: "#team",     icon: "groups",           description: "Meet the experts behind us"      },
-      { label: "Legacy & Milestones", href: "#legacy",   icon: "timeline",         description: "12+ years of healthcare impact"  },
+      { label: "Company Overview",    href: "/#about",   icon: "domain",           description: "Our story, mission & values"     },
+      { label: "CEO's Message",       href: "/#ceo",     icon: "person",           description: "Leadership vision & direction"   },
+      { label: "Our Team",            href: "/#team",    icon: "groups",           description: "Meet the experts behind us"      },
+      { label: "Legacy & Milestones", href: "/#legacy",  icon: "timeline",         description: "12+ years of healthcare impact"  },
     ],
   },
   {
     label: "Products",
     dropdown: [
-      { label: "Pharmaceuticals",           href: "#products", icon: "medication",     description: "Tablets, capsules & injectables" },
-      { label: "Active Pharma Ingredients", href: "#api",      icon: "science",        description: "High-purity API manufacturing"   },
-      { label: "Nutraceuticals",            href: "#nutra",    icon: "local_pharmacy", description: "Wellness & dietary supplements"   },
-      { label: "Veterinary Products",       href: "#vet",      icon: "pets",           description: "Animal healthcare solutions"      },
+      { label: "Pharmaceuticals",           href: "/products#pharmaceuticals", icon: "medication",     description: "Tablets, capsules & injectables" },
+      { label: "Active Pharma Ingredients", href: "/products#api",             icon: "science",        description: "High-purity API manufacturing"   },
+      { label: "Nutraceuticals",            href: "/products#nutra",           icon: "local_pharmacy", description: "Wellness & dietary supplements"   },
+      { label: "Veterinary Products",       href: "/products#vet",             icon: "pets",           description: "Animal healthcare solutions"      },
     ],
   },
   {
     label: "Infrastructure",
     dropdown: [
-      { label: "R&D Center",      href: "#rnd",            icon: "biotech",           description: "Cutting-edge research facility"  },
-      { label: "Manufacturing",   href: "#manufacturing",  icon: "factory",           description: "GMP-compliant plant & processes" },
-      { label: "Quality Control", href: "#quality",        icon: "verified",          description: "Rigorous QA/QC protocols"        },
-      { label: "Certifications",  href: "#certs",          icon: "workspace_premium", description: "WHO-GMP, ISO & international certs" },
+      { label: "R&D Center",      href: "/infrastructure#rnd",           icon: "biotech",           description: "Cutting-edge research facility"  },
+      { label: "Manufacturing",   href: "/infrastructure#manufacturing",  icon: "factory",           description: "GMP-compliant plant & processes" },
+      { label: "Quality Control", href: "/infrastructure#quality",        icon: "verified",          description: "Rigorous QA/QC protocols"        },
+      { label: "Certifications",  href: "/infrastructure#certs",          icon: "workspace_premium", description: "WHO-GMP, ISO & international certs" },
     ],
   },
 ];
@@ -145,16 +145,18 @@ export default function Navbar() {
             <Link href="/" onClick={scrollToTop}
               className="flex items-center gap-3 group flex-shrink-0"
             >
-              <img
-                src="/images/brand/logo.png"
-                alt="Fortschritt Healthcare"
-                className="h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="flex flex-col leading-tight">
+              <div className="flex items-center justify-center h-11 w-11 flex-shrink-0">
+                <img
+                  src="/images/brand/logo.png"
+                  alt="Fortschritt Healthcare"
+                  className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col justify-center leading-tight">
                 <span className="font-extrabold text-[17px] tracking-tight text-primary">
                   FORTSCHRITT
                 </span>
-                <span className="text-[9px] font-semibold tracking-[0.22em] uppercase text-secondary">
+                <span className="text-[9px] font-semibold tracking-[0.22em] uppercase text-primary">
                   Healthcare Limited
                 </span>
               </div>
@@ -249,7 +251,7 @@ export default function Navbar() {
 
               {/* CTA */}
               <a
-                href="#contact"
+                href="/contact"
                 className="ml-4 flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-full hover:bg-primary/90 active:scale-95 group transition-all duration-200"
                 style={{ boxShadow: "0 4px 22px -4px rgba(58,90,190,0.5)" }}
               >
@@ -352,7 +354,7 @@ export default function Navbar() {
 
             <div className="pt-2 pb-1">
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary/90 transition-all duration-200"
                 style={{ boxShadow: "0 4px 20px -4px rgba(58,90,190,0.4)" }}

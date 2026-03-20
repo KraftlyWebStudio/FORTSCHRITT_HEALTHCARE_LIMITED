@@ -19,13 +19,15 @@ const BrochureCTA = () => {
               Experience medical innovation backed by trust and excellence. Join us in our journey towards a healthier future.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-colors flex items-center gap-2 group shadow-xl shadow-black/10">
+              <a href="/products"
+                className="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-colors flex items-center gap-2 group shadow-xl shadow-black/10">
                 <span>Download Brochure</span>
                 <span className="material-icons group-hover:translate-y-1 transition-transform">download</span>
-              </button>
-              <button className="bg-white/10 text-white backdrop-blur px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-colors border border-white/20">
+              </a>
+              <a href="/contact"
+                className="bg-white/10 text-white backdrop-blur px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-colors border border-white/20">
                 Contact Our Team
-              </button>
+              </a>
             </div>
           </div>
         </div>

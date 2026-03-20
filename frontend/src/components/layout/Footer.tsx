@@ -43,10 +43,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-6 text-secondary">Resources</h4>
             <ul className="space-y-4 text-white/70 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">R&D Publications</a></li>
-              <li><a href="#" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">Manufacturing Ethics</a></li>
-              <li><a href="#" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">Terms of Service</a></li>
+              <li><a href="/rd-publications" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">R&D Publications</a></li>
+              <li><a href="/manufacturing-ethics" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">Manufacturing Ethics</a></li>
+              <li><a href="/privacy-policy" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-white transition-colors underline decoration-white/0 hover:decoration-white/40 underline-offset-4">Terms of Service</a></li>
             </ul>
           </div>
 
@@ -72,8 +72,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs">
           <p>© 2024 Fortschritt Healthcare Limited. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+            <a href="/sitemap-page" className="hover:text-white transition-colors">Sitemap</a>
+            <a href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</a>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const Products = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Product Portfolio</h2>
-            <h3 className="text-4xl font-extrabold text-slate-900 mb-6 font-display">Specialized Therapeutic Segments</h3>
+            <h3 className="text-4xl font-extrabold text-primary mb-6 font-display">Specialized Therapeutic Segments</h3>
             <p className="text-slate-600 text-lg">
               We offer a diverse range of high-quality formulations across major therapeutic areas, ensuring comprehensive patient care.
             </p>
@@ -37,7 +37,7 @@ const Products = () => {
                   north_east
                 </span>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-2">{cat.title}</h4>
+              <h4 className="text-xl font-bold text-primary mb-2">{cat.title}</h4>
               <p className="text-slate-500 text-sm font-semibold">{cat.count}</p>
             </div>
           ))}

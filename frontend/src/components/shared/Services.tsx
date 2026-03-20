@@ -45,7 +45,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Core Competencies</h2>
-          <h3 className="text-4xl font-extrabold text-slate-900 mb-6 font-display">Integrated Healthcare Solutions</h3>
+          <h3 className="text-4xl font-extrabold text-primary mb-6 font-display">Integrated Healthcare Solutions</h3>
           <p className="text-slate-600 text-lg">
             We provide comprehensive services across the pharmaceutical value chain, from conceptualization to global distribution.
           </p>
@@ -57,11 +57,11 @@ const Services = () => {
               <div className={`h-16 w-16 ${service.color} rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-current/20 transform group-hover:rotate-6 transition-transform`}>
                 <span className="material-icons text-3xl">{service.icon}</span>
               </div>
-              <h4 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h4>
+              <h4 className="text-2xl font-bold text-primary mb-4">{service.title}</h4>
               <p className="text-slate-500 leading-relaxed mb-6">
                 {service.desc}
               </p>
-              <a href="#" className="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-3 transition-all">
+              <a href="/infrastructure" className="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-3 transition-all">
                 Learn More
                 <span className="material-icons text-sm">arrow_forward</span>
               </a>

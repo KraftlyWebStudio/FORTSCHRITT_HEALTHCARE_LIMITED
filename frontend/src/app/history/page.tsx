@@ -34,7 +34,7 @@ const HistoryPage = () => {
       <main className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-20">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6"> Our Full History & Journey </h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-6"> Our Full History & Journey </h1>
             <p className="text-lg text-slate-600"> From our origins to our global presence, explore every milestone that has shaped Fortschritt Healthcare. </p>
           </div>
 
@@ -47,7 +47,7 @@ const HistoryPage = () => {
                 {/* Content Side */}
                 <div className="w-full md:w-1/2 p-10 bg-slate-50 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                   <div className="text-primary font-black text-3xl mb-2">{item.year}</div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-4">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed text-lg">{item.description}</p>
                 </div>
 
