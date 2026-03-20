@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FadeIn, FadeUp, motion } from "@/utils/animations";
+import { FadeIn, motion } from "@/utils/animations";
 
 const partners = [
   { name: "National Pharma", type: "Research Collaborator", icon: "science" },
