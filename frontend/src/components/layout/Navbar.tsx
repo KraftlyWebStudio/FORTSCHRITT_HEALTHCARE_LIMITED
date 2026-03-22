@@ -214,7 +214,7 @@ export default function Navbar() {
                                 className="drop-row flex items-center gap-3.5 px-3 py-2.5 rounded-xl hover:bg-primary/5"
                               >
                                 <div className="drop-icon w-9 h-9 rounded-lg flex items-center
-                                  justify-center flex-shrink-0 bg-primary/8">
+                                  justify-center flex-shrink-0 bg-primary/10">
                                   <span className="material-icons text-[18px] text-primary">
                                     {sub.icon}
                                   </span>
