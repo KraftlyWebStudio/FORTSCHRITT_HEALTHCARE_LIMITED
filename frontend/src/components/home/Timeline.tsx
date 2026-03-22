@@ -13,6 +13,7 @@ const milestones = [
 const Timeline = () => {
   return (
     <section id="timeline" className="py-24 bg-slate-50 overflow-hidden scroll-mt-20">
+      {/* Invisible scroll anchor used as a target for navigation links (e.g., #legacy) */}
       <div id="legacy" className="absolute invisible" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-20">
@@ -39,7 +40,7 @@ const Timeline = () => {
                   key={item.label}
                   whileHover={{ x: 6 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100 hover-lift"
+                  className="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
                 >
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                     item.color === "primary" ? "bg-primary/5 text-primary" : "bg-secondary/5 text-secondary"
@@ -59,7 +60,7 @@ const Timeline = () => {
             <div className="space-y-16">
               {milestones.map((item, idx) => (
                 <motion.div
-                  key={idx}
+                  key={item.year}
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
