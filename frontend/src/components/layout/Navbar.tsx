@@ -112,6 +112,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    return () => {
+      if (closeTimer.current) {
+        clearTimeout(closeTimer.current);
+        closeTimer.current = null;
+      }
+    };
+  }, []);
+
   const open = (label: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setActiveDropdown(label);
@@ -214,7 +223,7 @@ export default function Navbar() {
                                 className="drop-row flex items-center gap-3.5 px-3 py-2.5 rounded-xl hover:bg-primary/5"
                               >
                                 <div className="drop-icon w-9 h-9 rounded-lg flex items-center
-                                  justify-center flex-shrink-0 bg-primary/8">
+                                  justify-center flex-shrink-0 bg-primary/10">
                                   <span className="material-icons text-[18px] text-primary">
                                     {sub.icon}
                                   </span>
@@ -269,23 +278,41 @@ export default function Navbar() {
               onClick={() => setMobileOpen((p) => !p)}
               aria-label="Toggle menu"
             >
-              {[0, 1, 2].map((i) => (
-                <span
-                  key={i}
-                  className="block bg-primary rounded-full"
-                  style={{
-                    height: "2px",
-                    width: i === 1 ? (mobileOpen ? "0px" : "18px") : "22px",
-                    transform: mobileOpen
-                      ? i === 0 ? "rotate(45deg) translate(3.5px, 3.5px)"
-                      : i === 2 ? "rotate(-45deg) translate(3.5px, -3.5px)"
-                      : "none"
-                      : "none",
-                    opacity: i === 1 && mobileOpen ? 0 : 1,
-                    transition: "transform 0.4s cubic-bezier(0.16,1,0.3,1), width 0.3s ease, opacity 0.25s ease",
-                  }}
-                />
-              ))}
+              {/** Helper functions to keep hamburger line styles readable **/}
+              {/** These are defined inline to avoid cluttering the component's top-level scope **/}
+              {/*
+                Note: Using function declarations inside JSX expressions is allowed in TS/JS.
+                They are evaluated each render but are trivial in cost here.
+              */}
+              {(() => {
+                const getHamburgerLineWidth = (index: number, isOpen: boolean): string => {
+                  if (index === 1) {
+                    return isOpen ? "0px" : "18px";
+                  }
+                  return "22px";
+                };
+
+                const getHamburgerLineTransform = (index: number, isOpen: boolean): string => {
+                  if (!isOpen) return "none";
+                  if (index === 0) return "rotate(45deg) translate(3.5px, 3.5px)";
+                  if (index === 2) return "rotate(-45deg) translate(3.5px, -3.5px)";
+                  return "none";
+                };
+
+                return [0, 1, 2].map((i) => (
+                  <span
+                    key={i}
+                    className="block bg-primary rounded-full"
+                    style={{
+                      height: "2px",
+                      width: getHamburgerLineWidth(i, mobileOpen),
+                      transform: getHamburgerLineTransform(i, mobileOpen),
+                      opacity: i === 1 && mobileOpen ? 0 : 1,
+                      transition: "transform 0.4s cubic-bezier(0.16,1,0.3,1), width 0.3s ease, opacity 0.25s ease",
+                    }}
+                  />
+                ));
+              })()}
             </button>
           </div>
         </div>
