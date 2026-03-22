@@ -96,6 +96,7 @@ const navItems: NavItem[] = [
       { label: "Certifications",  href: "/infrastructure#certs",          icon: "workspace_premium", description: "WHO-GMP, ISO & international certs" },
     ],
   },
+  { label: "Careers", href: "/careers" },
 ];
 
 export default function Navbar() {
