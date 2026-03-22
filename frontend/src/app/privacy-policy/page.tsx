@@ -3,6 +3,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
 
+const EFFECTIVE_DATE = "January 1, 2024";
+const LAST_UPDATED_DATE = "March 2026";
+
 export default function PrivacyPolicyPage() {
   const sections = [
     {
@@ -45,7 +48,7 @@ export default function PrivacyPolicyPage() {
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-extrabold text-white mb-4">Privacy Policy</h1>
-          <p className="text-white/70">Effective Date: January 1, 2024 · Last Updated: March 2026</p>
+          <p className="text-white/70">{`Effective Date: ${EFFECTIVE_DATE} · Last Updated: ${LAST_UPDATED_DATE}`}</p>
         </div>
       </section>
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
