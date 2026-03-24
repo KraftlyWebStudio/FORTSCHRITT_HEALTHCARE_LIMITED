@@ -48,7 +48,7 @@ const Partners = () => {
         <div className="flex animate-scroll hover:[animation-play-state:paused] gap-8 py-4">
           {[...partners, ...partners].map((p, idx) => (
             <motion.div
-              key={idx}
+              key={`${idx}-${p.name}`}
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="flex-shrink-0 w-64 glass p-8 rounded-[24px] border border-white/50 group cursor-default"
