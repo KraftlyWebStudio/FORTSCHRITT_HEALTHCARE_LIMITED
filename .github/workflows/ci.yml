@@ -45,6 +45,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Validate Prisma Schema
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: pnpm --filter backend exec prisma generate
 
       - name: Lint Frontend
