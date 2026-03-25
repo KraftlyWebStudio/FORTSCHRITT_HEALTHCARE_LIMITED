@@ -45,7 +45,7 @@ const Timeline = () => {
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                     item.color === "primary" ? "bg-primary/5 text-primary" : "bg-secondary/5 text-secondary"
                   }`}>
-                    <span className="material-icons">{item.icon}</span>
+                    <span className="material-icons" aria-hidden="true">{item.icon}</span>
                   </div>
                   <div className="text-primary font-bold">{item.label}</div>
                 </motion.div>
