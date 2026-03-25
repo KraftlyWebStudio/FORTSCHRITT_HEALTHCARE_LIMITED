@@ -41,7 +41,7 @@ const CallToAction = () => {
                 </div>
                 <p className="text-white/80 text-sm leading-relaxed mb-6">
                   &quot;Our dedicated regulatory and support team ensures that your partnership experience is seamless across time zones.&quot;
-                     </p>
+                </p>
                 <div className="pt-6 border-t border-white/10">
                   <div className="text-white font-bold">Dr. Sarah Jenkins</div>
                   <div className="text-white/60 text-xs tracking-widest uppercase">Head of Global Partnerships</div>
