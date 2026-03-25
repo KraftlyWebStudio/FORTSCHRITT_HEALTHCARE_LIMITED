@@ -16,13 +16,19 @@ const CallToAction = () => {
               </h2>
               <p className="text-white/80 text-lg leading-relaxed mb-10">
                 Join our global network of healthcare pioneers. Whether you&apos;re looking for specialized distribution, contract manufacturing, or R&D collaboration, let&apos;s innovate together.
-                   </p>
+              </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-                <button className="px-10 py-5 bg-white text-primary font-extrabold rounded-2xl shadow-xl hover:bg-slate-50 hover:shadow-white/10 transition-all flex items-center gap-3">
+                <button
+                  className="px-10 py-5 bg-white text-primary font-extrabold rounded-2xl shadow-xl hover:bg-slate-50 hover:shadow-white/10 transition-all flex items-center gap-3"
+                  aria-label="Start collaboration with Fortschritt Healthcare"
+                >
                   Start Collaboration
                   <span className="material-icons">handshake</span>
                 </button>
-                <button className="px-10 py-5 bg-primary border-2 border-white/20 text-white font-extrabold rounded-2xl hover:bg-white/10 transition-all">
+                <button
+                  className="px-10 py-5 bg-primary border-2 border-white/20 text-white font-extrabold rounded-2xl hover:bg-white/10 transition-all"
+                  aria-label="Contact sales team"
+                >
                   Contact Sales
                 </button>
               </div>
@@ -41,7 +47,7 @@ const CallToAction = () => {
                 </div>
                 <p className="text-white/80 text-sm leading-relaxed mb-6">
                   &quot;Our dedicated regulatory and support team ensures that your partnership experience is seamless across time zones.&quot;
-                     </p>
+                </p>
                 <div className="pt-6 border-t border-white/10">
                   <div className="text-white font-bold">Dr. Sarah Jenkins</div>
                   <div className="text-white/60 text-xs tracking-widest uppercase">Head of Global Partnerships</div>
