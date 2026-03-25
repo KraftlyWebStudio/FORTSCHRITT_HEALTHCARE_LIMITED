@@ -14,7 +14,7 @@ const Timeline = () => {
   return (
     <section id="timeline" className="py-24 bg-slate-50 overflow-hidden scroll-mt-20">
       {/* Invisible scroll anchor used as a target for navigation links (e.g., #legacy) */}
-      <div id="legacy" className="absolute invisible" />
+      <div id="legacy" className="absolute invisible" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-20">
 
