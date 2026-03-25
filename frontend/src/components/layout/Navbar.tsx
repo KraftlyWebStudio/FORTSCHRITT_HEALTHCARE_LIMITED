@@ -200,7 +200,7 @@ export default function Navbar() {
                       </span>
                     </button>
 
-                    {activeDropdown === item.label && (
+                    {activeDropdown === item.label && item.dropdown && (
                       <div
                         className="nav-dropdown absolute top-[calc(100%+6px)] left-1/2 w-[295px]"
                         style={{ transform: "translateX(-50%)" }}
@@ -216,7 +216,7 @@ export default function Navbar() {
                           <div className="h-[3px] bg-gradient-to-r from-primary via-sky-400 to-primary" />
 
                           <div className="p-2.5 space-y-0.5">
-                            {item.dropdown!.map((sub) => (
+                            {item.dropdown.map((sub) => (
                               <a
                                 key={sub.label}
                                 href={sub.href}
