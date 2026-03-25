@@ -75,6 +75,11 @@ const Partners = () => {
         .animate-scroll {
           animation: scroll 40s linear infinite;
         }
+        @media (prefers-reduced-motion: reduce) {
+          .animate-scroll {
+            animation: none;
+          }
+        }
       `}</style>
     </section>
   );
