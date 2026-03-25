@@ -16,7 +16,7 @@ const CallToAction = () => {
               </h2>
               <p className="text-white/80 text-lg leading-relaxed mb-10">
                 Join our global network of healthcare pioneers. Whether you&apos;re looking for specialized distribution, contract manufacturing, or R&D collaboration, let&apos;s innovate together.
-                   </p>
+              </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-6">
                 <button
                   className="px-10 py-5 bg-white text-primary font-extrabold rounded-2xl shadow-xl hover:bg-slate-50 hover:shadow-white/10 transition-all flex items-center gap-3"
